@@ -67,17 +67,34 @@ class Array{
         //After Condition
         this.data[index] = element;
     }
+
+    search(element){
+        //Must be true
+        for(let i=0; i< this.length;i++){
+            if(this.data[i] === element){
+                console.log(element + "  is found at index "+ i);
+                return i;
+            }
+        }
+
+        //False
+        console.log(element +" is not found at any index");
+        return -1;
+    }
 }
 
 
 //
 
-arr1.traverse();
-arr1.insert(0,9);
-arr1.traverse();
 
-arr1.delete(1);
+
+
+
+
 arr1.traverse();
 
 arr1.update(2,5);
 arr1.traverse();
+
+arr1.search(43);
+arr1.search(9);
