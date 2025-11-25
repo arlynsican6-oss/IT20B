@@ -21,17 +21,10 @@ class Array{
         console.log(output);
     }
 
-    
-
 }
 
 //
 
-arr1.Traverse();
+arr1 = new Array([4,2,3]);
 
-arr2 = new Array([4,3,2]);
-
-arr2.traverse();
-
-arr1.insert(0,50);
 arr1.traverse();
