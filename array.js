@@ -19,12 +19,19 @@ class Array{
         }
 
         console.log(output);
-
     }
+
+    
+
 }
 
 //
 
-arr = new Array([4,2,3]);
-
 arr1.Traverse();
+
+arr2 = new Array([4,3,2]);
+
+arr2.traverse();
+
+arr1.insert(0,50);
+arr1.traverse();
