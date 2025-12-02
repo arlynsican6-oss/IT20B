@@ -11,7 +11,7 @@ class LinkedList{
         this.head = null;
     }
 
-    insert_at_beginning(beggining){
+    insert_at_beginning(element){
         const node = new Node(element);
         node.next = this.head;
         this.head = node;
@@ -36,17 +36,17 @@ class LinkedList{
             this.head = node;
             return;
         }
-    
-        let current = this.head;
+
+        let current  = this.head;
 
         while(current.next){
             current = current.next;
         }
-    
+
         current.next = node;
     }
 
-    insert_after(target, element){
+    insert_after(target,element){
         let current = this.head;
 
         while(current){
@@ -58,8 +58,19 @@ class LinkedList{
             }
             current = current.next;
         }
-        
+
         console.log("Target not found");
+    }
+
+    search(element){
+        let current = this.head;
+
+        while(current){
+            if(current.value === element)
+            return "Element found";
+            current = current.next;
+        }
+        return "Element not found";
     }
 }
 
@@ -70,3 +81,4 @@ list1.insert_at_end(3);
 console.log(list1.traverse());
 list1.insert_after(4,17);
 console.log(list1.traverse());
+console.log(list1.search(4));
